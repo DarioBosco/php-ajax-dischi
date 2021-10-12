@@ -20,14 +20,18 @@ include __DIR__ . '../assets/database.php';
 </head>
 
 <body>
-	<div class="main">
+	<main>
 		<ul class="albums">
 			<?php
 			foreach ($db as $key => $album) {
-				echo "<li>";
+				echo "<li class='album'>";
 				foreach ($album as $key => $details) {
-					if ($key != 'poster') {
-						echo ' <div class="' . $key . '">';
+					if ($key == "title") {
+						echo ' <div class="title">';
+						echo $details;
+						echo '</div>';
+					} else if ($key != 'poster') {
+						echo ' <div class="detail">';
 						echo $details;
 						echo '</div>';
 					} else {
@@ -38,7 +42,7 @@ include __DIR__ . '../assets/database.php';
 			}
 			?>
 		</ul>
-	</div>
+	</main>
 </body>
 
 </html>

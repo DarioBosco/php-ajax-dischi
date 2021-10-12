@@ -6,4 +6,46 @@
 
 ul {
 	list-style: none;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+body {
+	background-color: #1e2d3b;
+}
+
+main {
+	min-height: calc(100vh - 70px);
+	width: 60%;
+	margin: 0 auto;
+}
+
+.album {
+	height: 400px;
+	padding: 20px;
+	margin: 20px;
+	width: calc(100% / 5 - 80px);
+}
+
+.image-box {
+	height: 150px;
+	width: 150px;
+}
+
+img {
+	width: 100%;
+}
+
+.title {
+	color: white;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.detail {
+	color: grey;
+	text-align: center;
 }
