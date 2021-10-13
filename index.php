@@ -34,7 +34,7 @@ include __DIR__ . '../assets/database.php';
 						echo $details;
 						echo '</div>';
 					} else if ($key != 'poster') {
-						echo ' <div class="detail">';
+						echo ' <div class="detail ' . $key . '">';
 						echo $details;
 						echo '</div>';
 					} else {

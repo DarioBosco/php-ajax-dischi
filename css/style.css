@@ -28,6 +28,7 @@ main {
 	padding: 20px;
 	margin: 20px;
 	width: calc(100% / 5 - 80px);
+	background-color: #33404d;
 }
 
 .image-box {
