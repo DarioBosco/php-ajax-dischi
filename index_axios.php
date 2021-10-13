@@ -1,3 +1,7 @@
+<?php
+$search = $_GET["search"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +17,7 @@
 	<div id="app">
 		<main>
 			<ul class="albums">
-				<li v-for="(album, index) in db" :key="album.title" class="album">
+				<li v-for="(album, index) in db" :key="album.title" class="album" v-if="(album.genre == <?php echo $search ?>)">
 					<img :src="album.poster" alt="">
 					<div class="title">
 						{{album.title}}
