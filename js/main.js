@@ -11,8 +11,7 @@ const app = new Vue({
 		.then(response => {
 			console.log(response.data);
 			this.db = response.data;
-			
 		})
-		
+		.catch(err => console.log(err));
 	}
 });

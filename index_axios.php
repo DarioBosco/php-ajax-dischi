@@ -18,7 +18,7 @@
 					<div class="title">
 						{{album.title}}
 					</div>
-					<div v-for="(detail, index) in Object.entries(album)" :key="index" class="detail" :class="detail[0]" v-if="detail[0] != 'poster' && detail[0] != 'title ">
+					<div v-for="(detail, index) in Object.entries(album)" :key="index" class="detail" :class="detail[0]" v-if="detail[0] != 'poster' && detail[0] != 'title' ">
 						{{detail[1]}}
 					</div>
 				</li>
