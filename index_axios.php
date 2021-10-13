@@ -17,7 +17,7 @@ $search = $_GET["search"];
 	<div id="app">
 		<main>
 			<ul class="albums">
-				<li v-for="(album, index) in db" :key="album.title" class="album" v-if="(album.genre == <?php echo $search ?>)">
+				<li v-for="(album, index) in db" :key="album.title" class="album" v-if="album.genre == '<?php echo $search ?>' || '<?php echo $search ?>' == '' ">
 					<img :src="album.poster" alt="">
 					<div class="title">
 						{{album.title}}
