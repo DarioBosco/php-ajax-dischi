@@ -1,7 +1,3 @@
-<?php
-$search = $_GET["search"];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +12,16 @@ $search = $_GET["search"];
 <body>
 	<div id="app">
 		<main>
+			<form>
+				<label for="genres">Scegli un genere:</label>
+				<select id="genres" v-model="search">
+					<option value="all" selected="selected">Tutti i generi</option>
+					<option v-for="genre in genres" :value="genre">{{genre}}</option>
+				</select>
+				<button type='button' @click="newSearch">Search</button>
+			</form>
 			<ul class="albums">
-				<li v-for="(album, index) in db" :key="album.title" class="album" v-if="album.genre == '<?php echo $search ?>' || '<?php echo $search ?>' == '' ">
+				<li v-for="(album, index) in db" :key="album.title" class="album">
 					<img :src="album.poster" alt="">
 					<div class="title">
 						{{album.title}}
