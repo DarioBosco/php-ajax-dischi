@@ -6,7 +6,7 @@ const app = new Vue({
 		API_URL: './api/server.php',
 		db : [],
 		genres: [],
-		search: '',
+		search: 'all',
 	},
 	methods: {
 		newSearch () {

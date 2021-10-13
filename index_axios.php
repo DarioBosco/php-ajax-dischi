@@ -15,7 +15,7 @@
 			<form>
 				<label for="genres">Scegli un genere:</label>
 				<select id="genres" v-model="search">
-					<option value="all" selected="selected">Tutti i generi</option>
+					<option value="all">Tutti i generi</option>
 					<option v-for="genre in genres" :value="genre">{{genre}}</option>
 				</select>
 				<button type='button' @click="newSearch">Search</button>
